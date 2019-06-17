@@ -2108,6 +2108,15 @@ Species specific data is estimated using DEBTool and can be found here :
 
 https://www.bio.vu.nl/thb/deb/deblab/add_my_pet/entries_web/Epinephelus_marginatus/Epinephelus_marginatus_res.html
 
+To simulate a reproductive pattern, the year is divided into periods:  breeding/mating period (from June to September, pre-reproductive period (from April to May), and free period where individuals do not reproduce (the rest of the year). The simulation time-step represents one day.
+
+In each time step, individuals feed and use up-taken energy to run their metabolic processes (somatic maintenance, growth, maturity maintenance, maturity, or reproduction).
+The individual DEB state variables (V, E, and E_H) are then updated following the DEB standard model differential equations. If the individual can no longer pay somatic maintenance costs, it dies. Otherwise, it reaches the next life stage if the maturity level allows it.
+
+Along adulthood, the individual accumulates energy in its reproduction buffers. During the pre-reproduction period, depending on its  size, each individual checks whether it can change sex (\ie if L>Schange).
+
+During the breeding season, females mate once, with one of the bigger (in size) males, and all of their eggs are fertilized by the same partner, whereas males  mate with all females who choose them. During a free period, individuals do not interact and share only food resources.
+
 
 ## ZOOM
 
